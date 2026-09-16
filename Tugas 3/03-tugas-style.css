@@ -1,0 +1,111 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9; 
+    color: #333333;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+
+.media-card {
+    background-color: #ffffff;
+    max-width: 680px;
+    margin: 0 auto 40px auto; 
+    border-radius: 12px; 
+    border: 1px solid #e1e4e8;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.media-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.media-card__cover {
+    width: 100%;
+    display: block;
+}
+
+.media-card__cover-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.media-card__body {
+    padding: 24px;
+}
+
+.media-card__badge {
+    display: inline-block;
+    background-color: #006837; 
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.media-card__title {
+    font-size: 1.4rem;
+    color: #a71930; 
+    margin-bottom: 10px;
+}
+
+.media-card__description {
+    font-size: 0.95rem;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.media-card__video-player {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.media-card__audio-section {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #f2a900; 
+    margin-top: 10px;
+}
+
+.media-card__audio-label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #222222;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.media-card__audio-player {
+    width: 100%;
+    outline: none;
+}
+
+.media-card--featured .media-card__description {
+    color: #1a252f;
+    font-weight: 600;
+    font-size: 0.98rem;
+    background-color: #fff9e6;
+    padding: 12px 16px;
+    border-left: 4px solid #f2a900; 
+    border-radius: 4px;
+}

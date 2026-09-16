@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Komponen Pemutar Media Kuliah Responsif - AI Psychology">
+    <title>Pemutar Media Kuliah Responsif - Tugas Mandiri 3</title>
+    <link rel="stylesheet" href="./03-tugas-style.css">
+</head>
+<body>
+
+    <main>
+        <article class="media-card media-card--featured">
+            
+            <picture class="media-card__cover">
+                <source media="(min-width: 768px)" srcset="sampul-tugas-modul-3.webp" type="image/webp">
+                <source srcset="sampul-cadangan.webp" type="image/webp">
+                <img src="sampul-tugas-modul-3.webp" alt="Ilustrasi Pembelajaran AI Psychology" class="media-card__cover-img">
+            </picture>
+
+            <div class="media-card__body">
+                <span class="media-card__badge">Modul 3 &bull; AI Psychology</span>
+                <h1 class="media-card__title">Interaksi Kecerdasan Buatan dengan Perilaku Manusia</h1>
+                
+                <p class="media-card__description">
+                    Pembahasan konsep AI Psychology: bagaimana AI memahami perilaku manusia, peran psikologi dalam pengembangan AI, serta dampaknya terhadap emosi dan pengambilan keputusan.
+                </p>
+
+                <video class="media-card__video-player" controls poster="Logo-Resmi-Unhas-1-copy.png" preload="metadata">
+                    <source src="video-module-3.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung pemutaran video HTML5 natif.
+                </video>
+
+                <div class="media-card__audio-section">
+                    <span class="media-card__audio-label">Podcast Suara: Outline Short Course AI Psychology</span>
+                    <audio class="media-card__audio-player" controls preload="metadata">
+                        <source src="audio-module-3.mp3" type="audio/mpeg">
+                        Browser Anda tidak mendukung pemutaran audio HTML5 natif.
+                    </audio>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+</body>
+</html>

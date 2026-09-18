@@ -69,3 +69,18 @@ body {
         gap: 10px;
     }
 }
+
+.journal-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 24px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+@media (min-width: 992px) {
+    .journal-container {
+        grid-template-columns: 200px 1fr 220px;
+    }
+}

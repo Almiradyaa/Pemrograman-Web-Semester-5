@@ -87,6 +87,25 @@ body {
 
 .article-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Kolom otomatis & responsif */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 20px;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .journal-container {
+        grid-template-columns: 200px 1fr; 
+    }
+    
+    .journal-widgets {
+        display: none; 
+    }
+}
+
+@media (max-width: 767.98px) {
+    .journal-container {
+        grid-template-columns: 1fr; 
+    }
+    
+    .journal-widgets {
+        display: block;
+    }
 }

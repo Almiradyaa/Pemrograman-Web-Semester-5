@@ -4,14 +4,11 @@ declare(strict_types=1);
 class GuestBook {
     private PDO $pdo;
 
-    /**
-     * Konstruktor untuk menginisialisasi koneksi PDO ke MySQL
-     */
     public function __construct(
         string $host = 'localhost',
         string $dbname = 'db_perpustakaan',
         string $username = 'root',
-        string $password = 'qwcortis123321$' 
+        string $password = '' 
     ) {
         $dsn = "mysql:host={$host};dbname={$dbname};charset=utf8mb4";
         $options = [
@@ -27,9 +24,6 @@ class GuestBook {
         }
     }
 
-    /**
-     * Menyimpan data pesan baru menggunakan Prepared Statement (Mencegah SQL Injection)
-     */
     public function simpanPesan(string $nama, string $email, string $pesan): bool {
         $sql = "INSERT INTO buku_tamu (nama, email, pesan, tanggal_kirim) 
                 VALUES (:nama, :email, :pesan, NOW())";
@@ -42,9 +36,6 @@ class GuestBook {
         ]);
     }
 
-    /**
-     * Mengambil seluruh riwayat pesan dari yang terbaru
-     */
     public function ambilSemuaPesan(): array {
         $sql = "SELECT id, nama, email, pesan, tanggal_kirim 
                 FROM buku_tamu 
@@ -54,9 +45,6 @@ class GuestBook {
         return $stmt->fetchAll();
     }
 
-    /**
-     * Menghapus pesan berdasarkan ID (Mencegah SQL Injection)
-     */
     public function hapusPesan(int $id): bool {
         $sql = "DELETE FROM buku_tamu WHERE id = :id";
         $stmt = $this->pdo->prepare($sql);

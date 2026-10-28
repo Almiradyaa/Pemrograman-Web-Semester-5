@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+    --espresso: #3C2415;
+    --espresso-dark: #2A190E;
+    --pale-oak: #DDD9CE;
+    --pale-oak-light: #F4F2ED;
+}
+
+body {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    background-color: var(--pale-oak-light) !important;
+    color: var(--espresso) !important;
+}
+
+.bg-espresso { background-color: var(--espresso) !important; }
+.bg-pale-oak { background-color: var(--pale-oak) !important; }
+.text-espresso { color: var(--espresso) !important; }
+.text-pale-oak { color: var(--pale-oak) !important; }
+.border-espresso { border-color: var(--espresso) !important; }
+.border-pale-oak { border-color: var(--pale-oak) !important; }
+
+.btn-espresso {
+    background-color: var(--espresso) !important;
+    color: var(--pale-oak) !important;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+.btn-espresso:hover {
+    background-color: var(--espresso-dark) !important;
+    color: #ffffff !important;
+}
+
+.btn-pale-oak {
+    background-color: var(--pale-oak) !important;
+    color: var(--espresso) !important;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+.btn-pale-oak:hover {
+    background-color: #CFCABF !important;
+}
